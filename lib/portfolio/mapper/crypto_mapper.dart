@@ -7,6 +7,7 @@ extension CryptoMapper on AllCryptoResponse {
         .map((crypto) => CryptoViewData(
             id: crypto.id,
             name: crypto.name,
+            symbol: crypto.symbol,
             image: crypto.image,
             current_price: crypto.current_price,
             price_change_percentage_24h: crypto.price_change_percentage_24h))
