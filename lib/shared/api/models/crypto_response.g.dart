@@ -10,6 +10,7 @@ CryptoResponse _$CryptoResponseFromJson(Map<String, dynamic> json) =>
     CryptoResponse(
       id: json['id'] as String,
       name: json['name'] as String,
+      symbol: json['symbol'] as String,
       image: json['image'] as String,
       current_price: (json['current_price'] as num).toDouble(),
       price_change_percentage_24h:
@@ -20,6 +21,7 @@ Map<String, dynamic> _$CryptoResponseToJson(CryptoResponse instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
+      'symbol': instance.symbol,
       'image': instance.image,
       'current_price': instance.current_price,
       'price_change_percentage_24h': instance.price_change_percentage_24h,
