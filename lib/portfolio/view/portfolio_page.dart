@@ -17,21 +17,23 @@ class PortfolioPage extends ConsumerStatefulWidget {
 class _PortfolioPageState extends ConsumerState<PortfolioPage> {
   @override
   Widget build(BuildContext context) {
-    final getCryptos = ref.watch(portfolioPageProvider);
+    // final getCryptos = ref.watch(portfolioPageProvider);
     return Scaffold(
-      body: getCryptos.when(
-        data: (data) => PortfolioScreen(
-            onPressed: () {},
-            args: CryptoViewLayoutData(
-                id: 'id',
-                name: 'name',
-                symbol: 'symbol',
-                image: 'image',
-                current_price: 0.0,
-                price_change_percentage_24h: 0.0)),
-        error: (Object error, StackTrace? stackTrace) {},
-        loading: () {},
-      ),
+      body:
+          // getCryptos.when(
+          //   data: (data) =>
+          PortfolioScreen(
+              onPressed: () {},
+              args: CryptoViewLayoutData(
+                  id: 'id',
+                  name: 'name',
+                  symbol: 'symbol',
+                  image: 'image',
+                  current_price: 0.0,
+                  price_change_percentage_24h: 0.0)),
+      //   error: (Object error, StackTrace? stackTrace) {},
+      //   loading: () {},
+      // ),
 
       // Scaffold(
       //   body: SingleChildScrollView(
@@ -54,9 +56,6 @@ class _PortfolioPageState extends ConsumerState<PortfolioPage> {
       //       },
       //       loading: () => const CircularProgressIndicator()),
       // ),
-      bottomNavigationBar: const BottomNavigation(
-        selectedIndex: 0,
-      ),
     );
   }
 }

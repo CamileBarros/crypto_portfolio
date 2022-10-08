@@ -10,21 +10,19 @@ class AppBarPortfolio extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text(
-          title,
-          style: const TextStyle(color: Colors.black),
-        ),
-        actions: [
-          IconButton(
-              onPressed: onPressed,
-              icon: const Icon(Icons.search),
-              color: Colors.black),
-        ],
-        automaticallyImplyLeading: false,
+    return AppBar(
+      backgroundColor: Colors.white,
+      title: Text(
+        title,
+        style: const TextStyle(color: Colors.black),
       ),
+      actions: [
+        IconButton(
+            onPressed: onPressed,
+            icon: const Icon(Icons.search),
+            color: Colors.black),
+      ],
+      automaticallyImplyLeading: false,
     );
   }
 }
